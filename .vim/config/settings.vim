@@ -90,3 +90,5 @@ let g:ctrlp_cmd = 'CtrlPMRU'
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
 set background=dark
+" fugitive
+autocmd QuickFixCmdPost *grep* cwindow
