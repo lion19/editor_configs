@@ -27,7 +27,7 @@ nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
 map <leader>rh :%s/:\([^ ]*\)\(\s*\)=>/\1:/g<CR>
 
 " Leader-S to sort CSS properties
-nnoremap <leader>S ?{<cr>jV/^\s*\}?$<cr>k:sort<cr>:noh<cr>
+"nnoremap <leader>S ?{<cr>jV/^\s*\}?$<cr>k:sort<cr>:noh<cr>
 
 " Leader-y to toggle relative numbering
 function ToggleNumbering()
@@ -53,3 +53,8 @@ nmap Z gqap
 
 " w!! to save a file with sudo
 cmap w!! w !sudo tee % >/dev/null
+noremap <C-Tab> :tabnext<CR>
+noremap <C-S-Tab> :tabprev<CR>
+noremap ,S "0p
+vnoremap ,S "0p
+autocmd BufRead *.coffee inoremap ^X^H# X<c-h>^X^H#

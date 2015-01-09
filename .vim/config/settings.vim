@@ -1,5 +1,5 @@
 " Fonts
-set gfn=Source\ Code\ Pro\ Semibold:h15
+set gfn=Source\ Code\ Pro\ Semibold:h13
 color solarized
 syntax on
 
@@ -83,8 +83,8 @@ au BufRead,BufNewFile *.hbs set filetype=html
 au BufRead,BufNewFile *.md set filetype=markdown
 
 let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
-let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_mruf_exclude = '*/.git/*,/tmp/.*\|/temp/.*' " MacOSX/Linux
+let g:ctrlp_clear_cache_on_exit = 1
+let g:ctrlp_mruf_exclude = '.*COMMIT_EDITMSG.*|.*fugitiveblame.*|*/.git/*,/tmp/.*\|/temp/.*' " MacOSX/Linux
 let g:ctrlp_mruf_save_on_update = 1
 let g:ctrlp_cmd = 'CtrlPMRU'
 " Gundo
@@ -92,3 +92,16 @@ nnoremap <F5> :GundoToggle<CR>
 set background=dark
 " fugitive
 autocmd QuickFixCmdPost *grep* cwindow
+" 
+"set noexpandtab " Make sure that every file uses real tabs, not spaces
+set expandtab 
+set shiftround  " Round indent to multiple of 'shiftwidth'
+set smartindent " Do smart indenting when starting a new line
+set autoindent  " Copy indent from current line, over to the new line
+nnoremap tl :tabnext<CR>
+nnoremap th :tabprev<CR>
+nnoremap tn :tabnew<CR>
+syntax region foldBraces start=/{/ end=/}/ transparent fold keepend extend
+setlocal foldmethod=syntax
+setlocal foldlevel=99
+"set directory "~/tmp,/var/tmp,/tmp,~/temp"
