@@ -83,7 +83,7 @@ au BufRead,BufNewFile *.hbs set filetype=html
 au BufRead,BufNewFile *.md set filetype=markdown
 
 let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
-let g:ctrlp_clear_cache_on_exit = 1
+let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_mruf_exclude = '.*COMMIT_EDITMSG.*|.*fugitiveblame.*|*/.git/*,/tmp/.*\|/temp/.*' " MacOSX/Linux
 let g:ctrlp_mruf_save_on_update = 1
 let g:ctrlp_cmd = 'CtrlPMRU'

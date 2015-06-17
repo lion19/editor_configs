@@ -24,4 +24,5 @@ Bundle 'bling/vim-airline'
 Bundle 'ervandew/supertab'
 Bundle 'sjl/gundo.vim'
 Bundle 'fmoralesc/vim-pad'
+Bundle 'Shougo/neocomplete.vim'
 filetype plugin indent on
